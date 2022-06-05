@@ -24,7 +24,7 @@ Once it finishes installing, you will need to reboot the PS3 into safe mode, and
 
 ### Installing Petitboot
 
-In order to install the bootloader, you will need to first determine whether your PS3 has a NAND flash or a NOR flash. If it's a CECHAxx-CECHGxx, you will need the [NAND version of Petitboot](http://xanthe.cc/?a=download&file=dtbImage.ps3.bin.minimal). Otherwise, you will need the [NOR version of Petitboot](http://xanthe.cc/?a=download&file=dtbImage.ps3). Make sure the file is ~~named `dtbImage.ps3` and~~ placed on the root of your USB drive.
+In order to install the bootloader, you will need to first determine whether your PS3 has a NAND flash or a NOR flash. If it's a CECHAxx-CECHGxx, you will need the [NAND version of Petitboot](http://xanthe.cc/?a=download&file=dtbImage.ps3.bin.minimal). Otherwise, you will need the [NOR version of Petitboot](http://xanthe.cc/?a=download&file=dtbImage.ps3). Make sure the file is named `dtbImage.ps3` and placed on the root of your USB drive.
 
 The Rebug toolbox file should still be on your USB drive. If it somehow isn't, put it back on the root. Additionally, copy [this script](http://xanthe.cc/?a=download&file=create_hdd_region.sh) onto the root of the USB drive.
 
