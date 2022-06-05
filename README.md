@@ -6,6 +6,8 @@ This is a (soon-to-be-) complete kit containing all of the materials and instruc
 
 All "fat" PS3s are compatible, some "slim" PS3s are compatible, and no "super slim" PS3s are compatible. Anything built pre-2011 is fine; i.e., CECHAxx-CECHQxx, CECH-20xxx, CECH-21xxx, and certain CECH-25xxx models. Your best bet is to find a "fat" or 2000/2100 series "slim". 
 
+The slim models (especially 2100-series and pre-2011 2500-series) have the smallest CPU and GPU die sizes out of all the compatible consoles, and thus have lower power consumption, slightly stronger performance, and better thermals. If you have the choice, it might be nicer to get one of these.
+
 Source: https://www.psdevwiki.com/ps3/SKU_Models
 
 ## Jailbreaking your PS3
