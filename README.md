@@ -34,7 +34,7 @@ Now, enter Rebug toolbox, and resize the VFLASH by navigating to Utilities > Res
 
 ### Loading Petitboot for the first time
 
-In the Rebug toolbox, navigate to System > Boot OtherOS, and select "use current". Once Petitboot loads, select "Exit to Shell". `cd` to `/var/petitboot/mnt`, and check which device contains the `create_hdd_region.sh` script. On NOR devices, it should be `sda1`, and on NAND devices, it will probably be `sdb1`. Once you have located it, run the script. It should do everything automatically at this point.
+In the Rebug toolbox, navigate to System > Boot OtherOS, and select "use current". At this point, **PS3 controllers will no longer work, and you will need to plug in a USB keyboard.** Once Petitboot loads, select "Exit to Shell". `cd` to `/var/petitboot/mnt`, and check which device contains the `create_hdd_region.sh` script. On NOR devices, it should be `sda1`, and on NAND devices, it will probably be `sdb1`. Once you have located it, run the script. It should do everything automatically at this point.
 
 This step is optional, but may be useful. You can configure Petitboot to automatically select the first option after a specified timeout, by running `ps3-bl-option -O 5` (5 second timeout; you can change this to whatever you want). 
 
@@ -56,6 +56,20 @@ Some of the more popular general Linux distros (e.g. Arch, Fedora, Ubuntu, etc.)
 
 The only distro I'm aware of that is actively receiving updates for the PS3 is the [T2 System Development Environment](http://t2sde.org). If you're not an experienced Linux hobbyist, you will likely not find it very easy to troubleshoot things with this distro, as it requires quite a bit of UNIX and command-line knowledge. T2 is primarily command-line based, and it does not have a graphical desktop as almost every other modern distro would out of the box. However, it is actively being developed and officially supports PowerPC64 (i.e. PS3) systems, with many platform-specific patches to compensate for the general Linux community's lack of support for less popular CPU architectures. 
 
-T2, in addition to not featuring a graphical interface as the primary mode of interaction, does not have a package manager with online repositories containing pre-built packages. Any software installed in T2 must be built from scratch, and this can make things quite difficult at times. In addition, its documentation is not exactly newbie-friendly, meaning getting up to speed with the distro and learning how to use the T2 build toolchain might be very difficult. This makes it less enticing as an option for the PS3, but seeing as there are literally no other active PS3 Linux projects (that I'm aware of at least), this is the best we've got. Besides, with a bit more community support for the project, much of the difficulty involved with this OS can be reduced.
+T2, in addition to not featuring a graphical interface as the primary mode of interaction, does not have a package manager with online repositories containing pre-built packages. Any software installed in T2 must be built from scratch, and this can make things quite difficult at times. Moreover, its [documentation](http://t2sde.org/documentation/) is not exactly newbie-friendly, meaning getting up to speed with the distro and learning how to use the T2 build toolchain might be very difficult. This makes it less enticing as an option for the PS3, but seeing as there are literally no other active PS3 Linux projects (that I'm aware of at least), this is the best we've got. Besides, with a bit more community support for the project, much of the difficulty involved with this OS can be reduced.
 
-# \*\*\* Work in progress... \*\*\*
+### Performing the installation of your preferred Linux distro
+
+Now that you've decided on a Linux distro, go ahead and grab a PowerPC64 ISO of your distro and burn it to either a DVD or USB flash drive. Plug your DVD/USB into the PS3 and enter the Petitboot menu. If you've turned off the PS3, it should automatically boot to Petitboot. If it's still on from the previous instructions, run the command `petitboot` in the terminal to go back to the main menu. You should see your installation media listed on the menu, but before you select it, you may need to verify that the currently selected video mode is compatible with your TV. You can press 'e' to enter the menu item editor, and make the changes you need. [This documentation](https://manpages.debian.org/wheezy/ps3-utils/ps3-video-mode.8.en.html) explains the video modes very well.
+
+With the video mode sorted out, you can now select the installation media item and proceed with the Linux installation. If you're installing T2, [this video](https://www.youtube.com/watch?v=-Mk8Wgp9UOs) demonstrates the installation on the PS3, and you can pretty much use the same config as the uploader. [This video, by the creator of T2 himself](https://www.youtube.com/watch?v=dQee4IDoUow) may also be helpful. 
+
+### Obtaining packages for your Linux distro
+
+If you're using something other than T2, you're (sort of) in luck, as you probably have a built-in package manager. Refer to your distro's documentation for more information.
+
+If you're using T2 (as you should), you will need to grab the latest version of the T2 source from Subversion, by running `svn co https://svn.exactcode.de/t2/trunk t2-trunk` in your terminal. Make sure you are logged in as root, and `cd` into the `t2-trunk` folder. You should now be able to download and build [packages](http://t2sde.org/packages) by using `./scripts/Emerge-Pkg`. Refer to the [documentation](https://t2sde.org/handbook/html/t2.build.package.single.html) for more information on Emerge-Pkg. 
+
+## Final notes
+
+If there are any issues with this guide, let me know and I will attempt to resolve them on both the guide and your end if needed. I hope that this is helpful to at least someone out there! :-)
