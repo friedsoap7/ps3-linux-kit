@@ -40,6 +40,22 @@ This step is optional, but may be useful. You can configure Petitboot to automat
 
 ## Installing Linux
 
-If you've successfully followed all of the steps above, congratulations, you're now ready to install Linux! :partying_face:
+If you've successfully followed all of the steps above, congratulations, you're now ready to install Linux! :partying_face: 
+
+### History of PS3-supported Linux distros
+
+#### So many outdated distros...
+
+Historically, [Yellow Dog Linux](https://en.wikipedia.org/wiki/Yellow_Dog_Linux) was the distro of choice for PS3, even being officially supported by Sony. However, after Sony pulled the plug on OtherOS, and Apple stopped producing PowerPC machines, there wasn't much of a market for the distro anymore, and it was discontinued in 2012.
+
+There is a [fairly popular guide](https://www.psx-place.com/threads/tutorial-read-warning-installing-red-ribbon-linux-on-rebug-4-81-2-4-84-2-d-rex.16419/) on the PSX-place forums describing the installation of [Red Ribbon Linux](https://sourceforge.net/p/redribbon/wiki/Home/), however Red Ribbon hasn't been touched since 2014, and its own official website has been down for years. The guide I linked even warns you not to proceed with the installation due to the lack of support; I wouldn't bother with Red Ribbon personally, but you technically can use it if you so desire.
+
+Some of the more popular general Linux distros (e.g. Arch, Fedora, Ubuntu, etc.) have versions that reportedly work on the PS3, but they all seem to be seriously outdated and not really worth trying. Feel free to experiment with these, but YMMV...
+
+#### T2 SDE (System Development Environment)
+
+The only distro I'm aware of that is actively receiving updates for the PS3 is the [T2 System Development Environment](http://t2sde.org). If you're not an experienced Linux hobbyist, you will likely not find it very easy to troubleshoot things with this distro, as it requires quite a bit of UNIX and command-line knowledge. T2 is primarily command-line based, and it does not have a graphical desktop as almost every other modern distro would out of the box. However, it is actively being developed and officially supports PowerPC64 (i.e. PS3) systems, with many platform-specific patches to compensate for the general Linux community's lack of support for less popular CPU architectures. 
+
+T2, in addition to not featuring a graphical interface as the primary mode of interaction, does not have a package manager with online repositories containing pre-built packages. Any software installed in T2 must be built from scratch, and this can make things quite difficult at times. In addition, its documentation is not exactly newbie-friendly, meaning getting up to speed with the distro and learning how to use the T2 build toolchain might be very difficult. This makes it less enticing as an option for the PS3, but seeing as there are literally no other active PS3 Linux projects (that I'm aware of at least), this is the best we've got. Besides, with a bit more community support for the project, much of the difficulty involved with this OS can be reduced.
 
 # \*\*\* Work in progress... \*\*\*
